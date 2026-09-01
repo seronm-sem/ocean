@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — Ocean P3</title>
+<meta name="description" content="Ocean P3 support: subscriptions, cancellations, refunds, restoring purchases, and troubleshooting.">
+<meta name="theme-color" content="#050505">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black: #030304;
+    --black-2: #08080b;
+    --line: rgba(212,175,90,0.16);
+    --line-soft: rgba(212,175,90,0.08);
+    --gold: #d9b263;
+    --gold-bright: #f3d38a;
+    --gold-dim: #8d7645;
+    --cream: #cdc4ac;
+    --cream-dim: #8a8474;
+    --depth: #0a1016;
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background: radial-gradient(ellipse 120% 60% at 50% -10%, var(--depth) 0%, var(--black) 55%), var(--black);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--gold); }
+
+  .wrap{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px 100px;
+  }
+
+  header.nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 22px 32px;
+    border-bottom: 1px solid var(--line-soft);
+    margin-bottom: 50px;
+  }
+  .wordmark{
+    font-family:'Orbitron', sans-serif;
+    font-weight:700;
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+    color: var(--gold-bright);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .wordmark img{ width: 26px; height: 26px; border-radius: 7px; display:block; }
+  .back-link{
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--cream-dim);
+    text-decoration:none;
+    transition: color .2s ease;
+  }
+  .back-link:hover{ color: var(--gold); }
+
+  h1{
+    font-family:'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--gold-bright);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .eff-date{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--gold-dim);
+    display:block;
+    margin-bottom: 48px;
+  }
+
+  h2{
+    font-family:'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 40px 0 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line-soft);
+  }
+  h2:first-of-type{ margin-top: 0; padding-top: 0; border-top: none; }
+
+  p{ line-height: 1.75; font-size: 0.98rem; margin: 0 0 14px; color: var(--cream); }
+  ul{ margin: 0 0 14px; padding-left: 22px; line-height: 1.75; }
+  li{ margin-bottom: 6px; }
+
+  .steps{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    color: var(--gold-bright);
+    background: rgba(217,178,99,0.05);
+    border: 1px solid var(--line-soft);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 0 0 14px;
+  }
+  .steps .device{
+    display:block;
+    font-family:'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    margin-bottom: 6px;
+  }
+  .steps + .steps{ margin-top: -6px; }
+
+  footer{
+    padding: 40px 0 60px;
+    text-align:center;
+  }
+  .copyright{
+    font-size: 0.75rem;
+    color: var(--gold-dim);
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="wordmark"><img src="assets/icon.png" alt="">OCEAN P3</a>
+  <a class="back-link" href="index.html">&larr; Back to site</a>
+</header>
+
+<main class="wrap">
+  <h1>Support</h1>
+  <span class="eff-date">We're here to help — typical response within 24 hours.</span>
+
+  <h2>What is Ocean P3?</h2>
+  <p>Ocean P3 is a Pick 3 lottery number suggestion app that provides daily number recommendations based on historical patterns. Numbers are provided for informational purposes only.</p>
+
+  <h2>Subscription</h2>
+  <p>Ocean P3 offers a monthly subscription at $7.99/month with a 7-day free trial. Billing is handled through the App Store or Google Play, and you can cancel anytime.</p>
+
+  <h2>How do I cancel my subscription?</h2>
+  <div class="steps"><span class="device">iOS</span>Settings &rarr; your name &rarr; Subscriptions &rarr; Ocean P3 &rarr; Cancel</div>
+  <div class="steps"><span class="device">Android</span>Google Play &rarr; Profile &rarr; Payments &amp; subscriptions &rarr; Subscriptions &rarr; Ocean P3 &rarr; Cancel</div>
+
+  <h2>Refunds</h2>
+  <p>Refunds are handled directly by Apple or Google, not by us:</p>
+  <ul>
+    <li>Apple: <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a></li>
+    <li>Google: <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">play.google.com/store/account/subscriptions</a></li>
+  </ul>
+
+  <h2>Restoring Purchases</h2>
+  <p>Open Ocean P3 and tap Restore Purchase on the subscription screen while signed into the same account used for your original purchase.</p>
+
+  <h2>Technical Issues</h2>
+  <p>Check your internet connection and try closing and reopening the app. If the issue continues, contact us with your device type, OS version, and a description of the issue.</p>
+
+  <h2>Contact</h2>
+  <p>Need more help? Email <a href="mailto:feedback@oceandataservices.com">feedback@oceandataservices.com</a> — we typically respond within 24 hours.</p>
+</main>
+
+<footer>
+  <p class="copyright">&copy; 2026 Ocean P3. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
