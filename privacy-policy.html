@@ -1,219 +1,170 @@
-<title>Ocean P3 Privacy Policy</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Ocean P3</title>
+<meta name="description" content="Ocean P3 privacy policy: what we collect, how it's used, and your rights.">
+<meta name="theme-color" content="#050505">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #F8FAFC;
-    --surface: #FFFFFF;
-    --text: #1C2128;
-    --text-muted: #57606A;
-    --accent: #1D6FE8;
-    --rule: #D0D7DE;
-    --heading-serif: Georgia, 'Times New Roman', serif;
-    --body: system-ui, -apple-system, sans-serif;
+  :root{
+    --black: #030304;
+    --black-2: #08080b;
+    --line: rgba(212,175,90,0.16);
+    --line-soft: rgba(212,175,90,0.08);
+    --gold: #d9b263;
+    --gold-bright: #f3d38a;
+    --gold-dim: #8d7645;
+    --cream: #cdc4ac;
+    --cream-dim: #8a8474;
+    --depth: #0a1016;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0D1117;
-      --surface: #161B22;
-      --text: #E6EDF3;
-      --text-muted: #8B949E;
-      --accent: #58A6FF;
-      --rule: #21262D;
-    }
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background: radial-gradient(ellipse 120% 60% at 50% -10%, var(--depth) 0%, var(--black) 55%), var(--black);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
-  :root[data-theme="dark"] {
-    --bg: #0D1117;
-    --surface: #161B22;
-    --text: #E6EDF3;
-    --text-muted: #8B949E;
-    --accent: #58A6FF;
-    --rule: #21262D;
-  }
+  a{ color: var(--gold); }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--body);
-    font-size: 16px;
-    line-height: 1.7;
-    padding: 48px 24px 80px;
-  }
-
-  .page {
-    max-width: 680px;
+  .wrap{
+    max-width: 720px;
     margin: 0 auto;
+    padding: 0 28px 100px;
   }
 
-  header {
-    padding-bottom: 32px;
-    border-bottom: 1px solid var(--rule);
-    margin-bottom: 40px;
+  header.nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 22px 32px;
+    border-bottom: 1px solid var(--line-soft);
+    margin-bottom: 50px;
+  }
+  .wordmark{
+    font-family:'Orbitron', sans-serif;
+    font-weight:700;
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+    color: var(--gold-bright);
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .wordmark img{ width: 26px; height: 26px; border-radius: 7px; display:block; }
+  .back-link{
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--cream-dim);
+    text-decoration:none;
+    transition: color .2s ease;
+  }
+  .back-link:hover{ color: var(--gold); }
+
+  h1{
+    font-family:'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--gold-bright);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .eff-date{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--gold-dim);
+    display:block;
+    margin-bottom: 48px;
   }
 
-  .app-name {
-    font-family: var(--heading-serif);
-    font-size: 13px;
-    font-weight: normal;
-    letter-spacing: 0.08em;
+  h2{
+    font-family:'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 12px;
-  }
-
-  h1 {
-    font-family: var(--heading-serif);
-    font-size: 28px;
-    font-weight: normal;
-    line-height: 1.3;
-    color: var(--text);
-    text-wrap: balance;
-    margin-bottom: 12px;
-  }
-
-  .meta {
-    font-size: 14px;
-    color: var(--text-muted);
-  }
-
-  section {
-    margin-bottom: 36px;
-  }
-
-  h2 {
-    font-family: var(--heading-serif);
-    font-size: 18px;
-    font-weight: normal;
-    color: var(--text);
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  p {
-    color: var(--text);
-    margin-bottom: 12px;
-    max-width: 65ch;
-  }
-
-  p:last-child { margin-bottom: 0; }
-
-  ul {
-    padding-left: 20px;
-    margin-bottom: 12px;
-    max-width: 65ch;
-  }
-
-  li {
-    margin-bottom: 6px;
-    color: var(--text);
-  }
-
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  a:hover { text-decoration: underline; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-
-  .contact-block {
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    border-radius: 6px;
-    padding: 20px 24px;
-    margin-top: 40px;
-  }
-
-  .contact-block h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 8px;
-  }
-
-  footer {
-    margin-top: 48px;
+    color: var(--gold);
+    margin: 40px 0 12px;
     padding-top: 24px;
-    border-top: 1px solid var(--rule);
-    font-size: 13px;
-    color: var(--text-muted);
+    border-top: 1px solid var(--line-soft);
+  }
+  h2:first-of-type{ margin-top: 0; padding-top: 0; border-top: none; }
+
+  p{ line-height: 1.75; font-size: 0.98rem; margin: 0 0 14px; color: var(--cream); }
+  ul{ margin: 0 0 14px; padding-left: 22px; line-height: 1.75; }
+  li{ margin-bottom: 6px; }
+
+  footer{
+    padding: 40px 0 60px;
+    text-align:center;
+  }
+  .copyright{
+    font-size: 0.75rem;
+    color: var(--gold-dim);
+    opacity: 0.7;
   }
 </style>
+</head>
+<body>
 
-<div class="page">
-  <header>
-    <p class="app-name">Ocean P3</p>
-    <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: August 14, 2026 &nbsp;·&nbsp; Developer: Seron Moore</p>
-  </header>
+<header class="nav">
+  <a href="index.html" class="wordmark"><img src="assets/icon.png" alt="">OCEAN P3</a>
+  <a class="back-link" href="index.html">&larr; Back to site</a>
+</header>
 
-  <section>
-    <h2>Overview</h2>
-    <p>Ocean P3 is a Pick 3 lottery number suggestion app. This policy explains what information is collected when you use the app, how it is used, and your rights regarding that information.</p>
-    <p>We are committed to handling your data with transparency and care. We do not sell your personal information to third parties.</p>
-  </section>
+<main class="wrap">
+  <h1>Privacy Policy</h1>
+  <span class="eff-date">Effective August 14, 2026 · Seron Moore</span>
 
-  <section>
-    <h2>Information We Collect</h2>
-    <p>We collect the minimum information necessary to operate the app:</p>
-    <ul>
-      <li><strong>Subscription and purchase data</strong> — managed by RevenueCat, our subscription platform. This includes your subscription status, purchase history, and an anonymous user identifier. RevenueCat does not collect your payment details; those are handled entirely by Apple or Google.</li>
-      <li><strong>App usage data</strong> — we use Firebase Firestore solely to retrieve Pick 3 number data displayed in the app. We do not store personal information in Firestore.</li>
-    </ul>
-    <p>We do not collect your name, email address, phone number, location, or any other personally identifiable information.</p>
-  </section>
+  <h2>Overview</h2>
+  <p>Ocean P3 is a Pick 3 lottery companion app. We do not sell your personal information to third parties.</p>
 
-  <section>
-    <h2>How We Use Information</h2>
-    <p>The information collected is used only to:</p>
-    <ul>
-      <li>Verify your subscription status and unlock app features</li>
-      <li>Restore purchases if you reinstall the app or switch devices</li>
-      <li>Deliver Pick 3 number content from our database</li>
-    </ul>
-    <p>We do not use your information for advertising, profiling, or any purpose beyond operating the app.</p>
-  </section>
+  <h2>Data Collection</h2>
+  <p>Ocean P3 collects a minimal set of information through two channels:</p>
+  <ul>
+    <li>Subscription data via RevenueCat — subscription status, purchase history, and an anonymous user ID.</li>
+    <li>App content via Google Firebase Firestore — Pick 3 draw numbers only.</li>
+  </ul>
+  <p>No names, emails, phone numbers, or location data are gathered by the app.</p>
 
-  <section>
-    <h2>Third-Party Services</h2>
-    <p>Ocean P3 uses the following third-party services, each with their own privacy practices:</p>
-    <ul>
-      <li><strong>RevenueCat</strong> — subscription management. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</li>
-      <li><strong>Apple App Store / Google Play</strong> — payment processing. Your payment details are handled exclusively by Apple or Google and are never shared with us.</li>
-      <li><strong>Google Firebase Firestore</strong> — database for app content. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>.</li>
-    </ul>
-  </section>
+  <h2>Data Usage</h2>
+  <p>Information is used to verify subscriptions, restore purchases across devices, and deliver draw content from the database.</p>
 
-  <section>
-    <h2>Data Retention</h2>
-    <p>RevenueCat retains purchase and subscription records for as long as your account is active or as required to resolve disputes and comply with legal obligations. We do not independently store this data.</p>
-  </section>
+  <h2>Third-Party Partners</h2>
+  <ul>
+    <li>RevenueCat — subscription management</li>
+    <li>Apple App Store — payments, handled independently</li>
+    <li>Google Firebase Firestore — content database</li>
+  </ul>
 
-  <section>
-    <h2>Children's Privacy</h2>
-    <p>Ocean P3 is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
-  </section>
+  <h2>Data Retention</h2>
+  <p>RevenueCat maintains subscription records while accounts remain active or as legally required. Ocean P3 does not independently store subscription data.</p>
 
-  <section>
-    <h2>Your Rights</h2>
-    <p>Depending on your location, you may have the right to access, correct, or delete data associated with your use of the app. Because we do not directly store personal information beyond what RevenueCat manages, most requests should be directed to RevenueCat at <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</p>
-    <p>For any other privacy request, contact us at the address below.</p>
-  </section>
+  <h2>Children's Privacy</h2>
+  <p>Ocean P3 is not directed at children under 13. Any inadvertently collected data from a child will be deleted upon notification.</p>
 
-  <section>
-    <h2>Changes to This Policy</h2>
-    <p>We may update this policy from time to time. When we do, we will update the effective date at the top of this page. Continued use of the app after changes are posted constitutes acceptance of the updated policy.</p>
-  </section>
+  <h2>Your Rights</h2>
+  <p>You may request access to or deletion of your data. Most requests are directed to RevenueCat on your behalf.</p>
 
-  <div class="contact-block">
-    <h2>Contact</h2>
-    <p>Questions or concerns about this privacy policy? Reach us at:<br>
-    <a href="mailto:seronm@gmail.com">seronm@gmail.com</a></p>
-  </div>
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent to <a href="mailto:seronm@gmail.com">seronm@gmail.com</a>.</p>
+</main>
 
-  <footer>
-    <p>Ocean P3 &nbsp;·&nbsp; Seron Moore &nbsp;·&nbsp; Last updated August 14, 2026</p>
-  </footer>
-</div>
+<footer>
+  <p class="copyright">&copy; 2026 Ocean P3. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
