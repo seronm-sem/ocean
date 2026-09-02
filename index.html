@@ -413,6 +413,70 @@
     color: var(--cream-dim);
   }
 
+  /* ---------- COMING SOON MODAL ---------- */
+  .modal-overlay{
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 24px;
+    background: rgba(3,3,4,0.78);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+  }
+  .modal-overlay.open{ opacity: 1; pointer-events: auto; }
+  .modal-card{
+    position: relative;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(180deg, var(--panel), var(--black-2));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 40px 32px 32px;
+    box-shadow: var(--shadow-gold), inset 0 1px 0 rgba(255,255,255,0.02);
+    transform: translateY(12px);
+    transition: transform .25s ease;
+  }
+  .modal-overlay.open .modal-card{ transform: translateY(0); }
+  .modal-close{
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--cream-dim);
+    cursor: pointer;
+    padding: 6px;
+    transition: color .2s ease;
+  }
+  .modal-close:hover{ color: var(--gold); }
+  .modal-icon{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 18px;
+    fill: var(--gold-bright);
+  }
+  .modal-card h3{
+    font-family:'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--gold-bright);
+    margin: 0 0 10px;
+  }
+  .modal-card p{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--cream-dim);
+    margin: 0;
+  }
+
   /* ---------- FOOTER ---------- */
   footer{
     padding: 60px 0 50px;
@@ -504,7 +568,7 @@
         <svg viewBox="0 0 24 24"><path d="M16.365 1.43c0 1.14-.468 2.164-1.226 2.913-.82.808-2.148 1.44-3.24 1.352-.145-1.09.42-2.245 1.19-2.98C13.86.99 15.29.33 16.365 1.43zM20.63 17.24c-.55 1.26-.81 1.82-1.51 2.94-.98 1.56-2.36 3.5-4.08 3.52-1.53.02-1.93-1-4-1-2.08 0-2.52.98-4 1.03-1.66.05-2.93-1.68-3.92-3.24-2.03-3.19-3.58-9.02-1.5-12.95 1.04-1.96 2.9-3.2 4.92-3.23 1.6-.03 2.1.86 1.7 2.98.86-.02 3.1-.98 3.9-1.05 1.7-.15 3.35.66 4.44 2.03-3.9 2.14-3.27 7.72.05 9.01z"/></svg>
         <span class="store-text"><span class="small">Download on the</span><span class="big">App Store</span></span>
       </a>
-      <a class="btn-store" href="#" aria-label="Get it on Google Play">
+      <a class="btn-store btn-play" href="#" aria-label="Get it on Google Play">
         <svg viewBox="0 0 24 24"><path d="M4 3.5v17a1 1 0 0 0 1.5.87l14-8.5a1 1 0 0 0 0-1.74l-14-8.5A1 1 0 0 0 4 3.5z"/></svg>
         <span class="store-text"><span class="small">Get it on</span><span class="big">Google Play</span></span>
       </a>
@@ -586,7 +650,7 @@
           <svg viewBox="0 0 24 24"><path d="M16.365 1.43c0 1.14-.468 2.164-1.226 2.913-.82.808-2.148 1.44-3.24 1.352-.145-1.09.42-2.245 1.19-2.98C13.86.99 15.29.33 16.365 1.43zM20.63 17.24c-.55 1.26-.81 1.82-1.51 2.94-.98 1.56-2.36 3.5-4.08 3.52-1.53.02-1.93-1-4-1-2.08 0-2.52.98-4 1.03-1.66.05-2.93-1.68-3.92-3.24-2.03-3.19-3.58-9.02-1.5-12.95 1.04-1.96 2.9-3.2 4.92-3.23 1.6-.03 2.1.86 1.7 2.98.86-.02 3.1-.98 3.9-1.05 1.7-.15 3.35.66 4.44 2.03-3.9 2.14-3.27 7.72.05 9.01z"/></svg>
           <span class="store-text"><span class="small">Download on the</span><span class="big">App Store</span></span>
         </a>
-        <a class="btn-store big" href="#" aria-label="Get it on Google Play">
+        <a class="btn-store big btn-play" href="#" aria-label="Get it on Google Play">
           <svg viewBox="0 0 24 24"><path d="M4 3.5v17a1 1 0 0 0 1.5.87l14-8.5a1 1 0 0 0 0-1.74l-14-8.5A1 1 0 0 0 4 3.5z"/></svg>
           <span class="store-text"><span class="small">Get it on</span><span class="big">Google Play</span></span>
         </a>
@@ -596,6 +660,15 @@
   </section>
 
 </main>
+
+<div class="modal-overlay" id="playModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="playModalTitle">
+    <button class="modal-close" type="button" aria-label="Close">&times;</button>
+    <svg class="modal-icon" viewBox="0 0 24 24"><path d="M4 3.5v17a1 1 0 0 0 1.5.87l14-8.5a1 1 0 0 0 0-1.74l-14-8.5A1 1 0 0 0 4 3.5z"/></svg>
+    <h3 id="playModalTitle">Coming Soon</h3>
+    <p>Ocean P3 for Android is on its way — launching in the next couple weeks. Check back soon.</p>
+  </div>
+</div>
 
 <footer>
   <div class="wrap">
@@ -639,6 +712,32 @@
       span.style.setProperty('--drift', drift + 'px');
       container.appendChild(span);
     }
+  })();
+
+  (function(){
+    var overlay = document.getElementById('playModal');
+    var closeBtn = overlay.querySelector('.modal-close');
+
+    function openModal(e){
+      e.preventDefault();
+      overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden', 'false');
+    }
+    function closeModal(){
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden', 'true');
+    }
+
+    document.querySelectorAll('.btn-play').forEach(function(el){
+      el.addEventListener('click', openModal);
+    });
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e){
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeModal();
+    });
   })();
 </script>
 
